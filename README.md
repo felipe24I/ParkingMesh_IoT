@@ -79,6 +79,9 @@ Programa_mesh_sensores/
 
 ´´´
 git clone https://github.com/<tu_usuario>/Programa_mesh_sensores.git
+´´´
+
+´´´
 cd Programa_mesh_sensores
 ´´´
 
