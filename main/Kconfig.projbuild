@@ -1,0 +1,22 @@
+menu "Parking Mesh Configuration"
+
+config MESH_IS_ROOT
+    bool "¿Este dispositivo será ROOT?"
+    default y
+    help
+        Marca esta opción si este firmware será el nodo ROOT fijo.
+
+config MESH_ROUTER_SSID
+    string "Router SSID"
+    default "Hermanitos"
+    help
+        Nombre del router WiFi al que se conectará el ROOT.
+        Debe coincidir exactamente con el SSID de tu router.
+
+config MESH_ROUTER_PASS
+    string "Router Password"
+    default "12345678"
+    help
+        Contraseña del router (entre 8 y 63 caracteres).
+
+endmenu
