@@ -77,11 +77,8 @@ Programa_mesh_sensores/
 
 ### 1. Clonar el repositorio
 
-´´´
+´´´text
 git clone https://github.com/<tu_usuario>/Programa_mesh_sensores.git
-´´´
-
-´´´
 cd Programa_mesh_sensores
 ´´´
 
