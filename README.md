@@ -1,5 +1,15 @@
 # ParkingMesh IoT
 
+**Autores:** Felipe Idárraga Quintero y  Julian Felipe Gutiérrez Ramírez
+
+**Nombre de la Práctica:** Proyecto Final
+
+**Curso:** Desarrollo de Sistemas IoT
+
+**Departamento:** Departamento de Ingeniería Electrica, Electronica y Computacion
+
+---
+
 Proyecto de **parqueadero IoT** usando **Wi-Fi Mesh (ESP-MESH)** con tarjetas **Seeed Studio XIAO ESP32C6**.  
 Cada nodo mesh tiene un **sensor ultrasónico** para detectar si la plaza está **OCUPADA** o **LIBRE** y envía su estado a través de la red mesh hacia un **nodo ROOT**
 
@@ -198,9 +208,23 @@ idf.py -p COMx build flash monitor     # cambia COMx por el puerto correcto
   ```text
    idf.py -p COMx monitor
   ```
+**Ejemplo de salida ROOT**
+
+![Imagen de WhatsApp 2025-12-11 a las 08 01 59_59e6c988](https://github.com/user-attachments/assets/d66ef4c2-367c-4557-9878-50cfb3f81acd)
+
+
 4. Acerca/aleja un objeto del sensor ultrasónico de cada nodo y verifica:
   - Cambios en la distancia.
   - Cambio entre OCUPADO / LIBRE.
+
+**Ejemplo de salida nodo 1**
+
+![Imagen de WhatsApp 2025-12-11 a las 08 07 48_115f0ad2](https://github.com/user-attachments/assets/8ff6e2e6-e8dd-46a6-b7aa-6d356182ee92)
+
+
+**Ejemplo de salida nodo 2**
+
+![Imagen de WhatsApp 2025-12-10 a las 11 32 53_539b7d1b](https://github.com/user-attachments/assets/e4449a47-91d0-40ed-ac71-f8d7b023217b)
 
 ---
 
