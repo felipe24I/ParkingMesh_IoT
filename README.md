@@ -63,7 +63,7 @@ Nodo 1: OCUPADO (dist=18.4 cm, capa 1)
 
 Estructura típica de un proyecto ESP-IDF:
 
-´´´
+```text
 Programa_mesh_sensores/
 ├─ main/
 │  ├─ mesh_main.c        # Lógica principal de Mesh + sensores
@@ -71,24 +71,24 @@ Programa_mesh_sensores/
 ├─ CMakeLists.txt
 ├─ sdkconfig             # Configuración generada por menuconfig
 └─ README.md             # Este archivo
-´´´
+```
 
 ## Configuración del proyecto
 
 ### 1. Clonar el repositorio
 
-´´´text
+```text
 git clone https://github.com/<tu_usuario>/Programa_mesh_sensores.git
 cd Programa_mesh_sensores
-´´´
+```
 
 ### 2. Configurar el entorno ESP-IDF
 
 Ejemplo (Windows, usando el ESP-IDF previamente instalado):
 
- ´´´
+```text
  idf.py --version   # Para comprobar que todo está bien
-´´´
+```
 
 ### 3. Configurar parámetros Wi-Fi / Mesh
 
@@ -105,7 +105,7 @@ Recuerda tener la placa y el com al cual le vas a aplicar la configuración
 
   y escriba:
 
-  ```
+  ```text
   ESP-IDF: Open ESP-IDF terminal
   ```
 
@@ -118,7 +118,7 @@ Recuerda tener la placa y el com al cual le vas a aplicar la configuración
 
 2. En la terminal de ESP-IDF, ejecuta:
 
-   ```
+   ```text
    idf.py menuconfig
    ```
    
@@ -158,7 +158,7 @@ Recuerda tener la placa y el com al cual le vas a aplicar la configuración
 
 En el código se definen los pines para el TRIG y el ECHO del sensor:
 
-```
+```c
 #define TRIG_GPIO   XX   // GPIO conectado al TRIG
 #define ECHO_GPIO   YY   // GPIO conectado al ECHO
 ```
@@ -169,7 +169,7 @@ Asegúrate de que:
 
 También tendrás un umbral en centímetros para decidir si la plaza está ocupada:
 
-```
+```c
 #define UMBRAL_OCUPADO_CM   40.0f   // Ejemplo: < 40 cm = OCUPADO
 ```
 
@@ -180,10 +180,10 @@ También tendrás un umbral en centímetros para decidir si la plaza está ocupa
 1. Conecta la placa por USB
 2. En la raíz del proyecto:
 
-```
+```text
 idf.py set-target esp32c6        # solo la primera vez (para la XIAO ESP32C6)
 idf.py -p COMx build flash monitor     # cambia COMx por el puerto correcto
-````
+```
 
 #### Ejemplo de salida:
 
@@ -195,7 +195,7 @@ idf.py -p COMx build flash monitor     # cambia COMx por el puerto correcto
 2. Flashea los nodos MESH (con THIS_IS_ROOT = 0 y NODE_ID distinto).
 3. Abre el monitor serie del ROOT:
    
-  ```
+  ```text
    idf.py -p COMx monitor
   ```
 4. Acerca/aleja un objeto del sensor ultrasónico de cada nodo y verifica:
